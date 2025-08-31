@@ -105,7 +105,6 @@ $value = "apple,banana,mango";
 $convertArray = explode(",", $value);
 // Array দেখতে হলে:
 print_r($convertArray); echo "<br>";
-
 echo strpos($value, "or"); echo "<br>";
 
 
