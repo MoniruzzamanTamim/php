@@ -110,4 +110,76 @@ echo strpos($value, "or"); echo "<br>";
 
 ?>
 
- 
+
+<!-- Type Conversion  -->
+<h1>Type Conversion </h1> <br>
+ <?php 
+
+// প্রাথমিক ভেরিয়েবল গুলো
+$int_var = 42;                 // Integer
+$float_var = 3.1416;           // Float
+$string_var1 = "123abc";       // স্ট্রিং শুরুতে সংখ্যা
+$string_var2 = "abc123";       // স্ট্রিং শুরুতে অক্ষর
+$bool_var_true = true;         // Boolean true
+$bool_var_false = false;       // Boolean false
+$null_var = NULL;              // Null
+$array_var = [1, 2, 3];        // Array
+
+// কনভার্সন দেখানো হচ্ছে
+echo "<h3>Type Conversion Demonstration</h3>";
+
+// Integer রূপান্তর
+echo "<strong>(int) Conversion:</strong><br>";
+var_dump((int)$int_var); echo "<br>";         // int(42)
+var_dump((int)$float_var); echo "<br>";       // int(3)
+var_dump((int)$string_var1); echo "<br>";     // int(123)
+var_dump((int)$string_var2); echo "<br>";     // int(0)
+var_dump((int)$bool_var_true); echo "<br>";   // int(1)
+var_dump((int)$bool_var_false); echo "<br>";  // int(0)
+var_dump((int)$null_var); echo "<br>";        // int(0)
+// var_dump((int)$array_var); echo "<br>";    // Error: Array to integer conversion
+
+echo "<hr>";
+
+// Float রূপান্তর
+echo "<strong>(float) Conversion:</strong><br>";
+var_dump((float)$int_var); echo "<br>";       // float(42)
+var_dump((float)$string_var1); echo "<br>";   // float(123)
+var_dump((float)$string_var2); echo "<br>";   // float(0)
+var_dump((float)$bool_var_true); echo "<br>"; // float(1)
+var_dump((float)$null_var); echo "<br>";      // float(0)
+
+echo "<hr>";
+
+// String রূপান্তর
+echo "<strong>(string) Conversion:</strong><br>";
+var_dump((string)$int_var); echo "<br>";      // string(2) "42"
+var_dump((string)$float_var); echo "<br>";    // string(6) "3.1416"
+var_dump((string)$bool_var_true); echo "<br>"; // string(1) "1"
+var_dump((string)$bool_var_false); echo "<br>"; // string(0) ""
+var_dump((string)$null_var); echo "<br>";     // string(0) ""
+var_dump((string)123); echo "<br>";           // string(3) "123"
+
+echo "<hr>";
+
+// Boolean রূপান্তর
+echo "<strong>(bool) Conversion:</strong><br>";
+var_dump((bool)0); echo "<br>";               // false
+var_dump((bool)1); echo "<br>";               // true
+var_dump((bool)""); echo "<br>";              // false
+var_dump((bool)"0"); echo "<br>";             // false
+var_dump((bool)"false"); echo "<br>";         // true
+var_dump((bool)array()); echo "<br>";         // false
+var_dump((bool)[0]); echo "<br>";             // true
+
+echo "<hr>";
+
+// Array রূপান্তর
+echo "<strong>(array) Conversion:</strong><br>";
+var_dump((array)$int_var); echo "<br>";       // array(1) { [0]=> int(42) }
+var_dump((array)$string_var1); echo "<br>";   // array(1) { [0]=> string(6) "123abc" }
+var_dump((array)$null_var); echo "<br>";      // array(0) { }
+
+?>
+
+
