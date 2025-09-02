@@ -1,0 +1,2 @@
+Hello PHP! I Love PHP 
+Today I practiced file handling.
