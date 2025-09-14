@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
     $email      = trim($_POST['email']);
     $password   = $_POST['password'];
     $repassword = $_POST['repassword'];
+  
 
     // Input validation
     if (empty($full_name) || empty($email) || empty($password) || empty($repassword)) {
